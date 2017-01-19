@@ -6,3 +6,4 @@ RUN apt-get update && apt-get install -yq python-dev python-numpy libtbb2 libtbb
 RUN git clone https://github.com/Itseez/opencv.git /opt/opencv
 RUN git clone https://github.com/Itseez/opencv_contrib.git /opt/opencv_contrib
 
+RUN cd /opt/opencv && mkdir build && cd build && cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
